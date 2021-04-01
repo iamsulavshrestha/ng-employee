@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { EmployeeCreateComponent } from './components/employee-create/employee-create.component';
 import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component';
-import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
+import { EmployeeUpdateComponent } from './components/employee-update/employee-update.component';
 
 @NgModule({
   declarations: [
