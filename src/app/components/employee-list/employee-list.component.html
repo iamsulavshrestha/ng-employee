@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Employees List</h2>
+    <a href="/employee/create" class="btn btn-primary btn-lg">Add new</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Age</th>
+                <th scope="col">Image</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees; let i =index">
+                <td>{{ employee.id}} </td>
+                <td>{{ employee.employee_name}}</td>
+                <td>{{ employee.employee_salary}}</td>
+                <td>{{ employee.employee_age }}</td>
+                <td>{{ employee.profile_image }}</td>
+                <td>
+                    <a [routerLink]="['/employee/edit/', employee.id]" class="btn btn-primary btn-sm" >Edit</a>
+                    <a href="#" class="btn btn-danger btn-sm" (click)="deleteEmployee(employee.id)">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node:
+    build: .
+    # command: yarn start
+    ports:
+      - "4206:4200"
+    image: node:lts-alpine
+    volumes:
+      - '.:/app'  
+      - '/app/node_modules'
+    stdin_open: true # equivalent of -i
+    tty: true        # equivalent of -t
