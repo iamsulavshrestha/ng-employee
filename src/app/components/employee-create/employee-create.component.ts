@@ -34,7 +34,7 @@ export class EmployeeCreateComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.router.navigate(['/employees']);
+          this.router.navigate(['/employees'], { queryParams: { message: response.message } });
 
         }
       )

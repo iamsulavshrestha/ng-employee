@@ -1,13 +1,13 @@
-version: '3'
+version: '3.7'
+
 services:
-  node:
+  nodey:
+    container_name: boss
+    command: yarn run start-proxy
     build: .
-    # command: yarn start
-    ports:
-      - "4206:4200"
-    image: node:lts-alpine
     volumes:
-      - '.:/app'  
-      - '/app/node_modules'
-    stdin_open: true # equivalent of -i
-    tty: true        # equivalent of -t
+      - ".:/home/node"
+    ports:
+      - 42001:4200
+    environment:
+      CHOKIDAR_USEPOLLING: 'true'
